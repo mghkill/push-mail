@@ -3,13 +3,11 @@ import axios from "axios";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const [email, setEmail] = useState("filipexpert63@gmail.com");
-  const [passwordApp, setPasswordApp] = useState("embkoekfyrwogroy");
-  const [message, setMessage] = useState(
-    "<html><body style='font-family: Arial, margin-top: '50px', sans-serif; background-color: #f4f4f4; color: #333;'><div style='max-width: 600px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);'><h2 style='color: #4CAF50;'>Apresentamos o Novo Produto!</h2><p style='font-size: 18px;'>Estamos empolgados em apresentar <strong>Produto XYZ</strong>, a solução definitiva para suas necessidades!</p><p style='font-size: 16px;'>Com características inovadoras que incluem:</p><ul><li>Alta eficiência</li><li>Design moderno</li><li>Fácil de usar</li></ul><p style='text-align: center;'><a href='https://www.google.com/' style='background-color: #4CAF50; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px;'>Saiba Mais</a></p><p>Obrigado pela sua atenção!</p><p>Atenciosamente,<br>A Equipe</p></div></body></html>"
-  );
-  const [title1, setTitle1] = useState("Não responda");
-  const [title2, setTitle2] = useState("TabName");
+  const [email, setEmail] = useState("");
+  const [passwordApp, setPasswordApp] = useState("");
+  const [message, setMessage] = useState("");
+  const [title1, setTitle1] = useState("");
+  const [title2, setTitle2] = useState("");
   const [response, setResponse] = useState({});
   const [sending, setSending] = useState(false);
   const [sentCount, setSentCount] = useState(0);
