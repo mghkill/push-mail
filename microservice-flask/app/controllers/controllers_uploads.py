@@ -5,16 +5,17 @@ from app.services.services_uploads import handle_upload, handle_error
 def create_uploads():
     data = request.get_json()
     email = data.get('email')
-    senha_app = data.get('senha_app')
-    mensagem = data.get('mensagem')
-    destinatarios = data.get('destinatarios')
+    password_app = data.get('password_app')
+    message = data.get('message')
+    recipients = data.get('recipients')
+    title1 = data.get('title1')
+    title2 = data.get('title2')
 
-    if email and senha_app and mensagem and destinatarios:
-        response_data = handle_upload(email, senha_app, mensagem, destinatarios)
+    if email and password_app and message and recipients and title1 and title2:
+        response_data = handle_upload(email, password_app, message, recipients, title1, title2)
         return jsonify(response_data), 200
     else:
         return jsonify({"message": "Faltam campos obrigatórios."}), 400
-    
     
 def read_all_uploads():
     pass
