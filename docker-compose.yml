@@ -20,7 +20,7 @@ services:
       context: ./microservice-front
       dockerfile: Dockerfile
     ports:
-      - "3002:3002"
+      - "3000:3000"
     networks:
       - ImageDatabase
     
