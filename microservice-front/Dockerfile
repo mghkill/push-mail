@@ -4,22 +4,16 @@ RUN apt update && apt -yq upgrade && apt install -yq build-essential libpq-dev o
 
 ENV TZ="America/Sao_Paulo"
 
-WORKDIR /apiNode
+WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
-
-# COPY .env .env
-
-# ENV $(cat .env | tr '\n' ' ')
+RUN yarn install
 
 COPY . .
 
-RUN npm install
+RUN yarn build
 
-RUN npm run build
-
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
 
 EXPOSE 3000

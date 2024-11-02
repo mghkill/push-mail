@@ -15,21 +15,12 @@ services:
       - ImageDatabase   
  
   
-  # api-node:
-  #   build:
-  #     context: ./Microservice_Nest
-  #     dockerfile: Dockerfile   
-  #   ports:
-  #     - "3333:3333"   
-  #   networks:
-  #     - ImageDatabase  
-
   web:
     build:
-      context: ./microservice-sendemail
+      context: ./microservice-front
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3002:3002"
     networks:
       - ImageDatabase
     

@@ -18,7 +18,7 @@ def create_uploads():
         return jsonify({"message": "Faltam campos obrigatórios."}), 400
     
 def read_all_uploads():
-    pass
+    return jsonify({}), 200
 
 def update_all_uploads():
     pass
