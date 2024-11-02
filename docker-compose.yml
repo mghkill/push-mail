@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  api:
+    build: 
+      context: ./microservice-flask   
+      dockerfile: Dockerfile   
+    ports:
+      - "5000:5000"   
+    environment:
+      - FLASK_ENV=development  
+    volumes:
+      - ./microservice-flask:/api   
+    networks:
+      - ImageDatabase   
+ 
+  
+  # api-node:
+  #   build:
+  #     context: ./Microservice_Nest
+  #     dockerfile: Dockerfile   
+  #   ports:
+  #     - "3333:3333"   
+  #   networks:
+  #     - ImageDatabase  
+
+  web:
+    build:
+      context: ./microservice-sendemail
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - ImageDatabase
+    
+ 
+networks:
+  ImageDatabase:  # Define a rede
