@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Estilo do contêiner principal */
+  #root,
+  form {
+    max-width: 900px !important; /* Aumentando a largura máxima */
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #04050c;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos dos elementos dentro do formulário */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4CAF50;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  textarea,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 150px;
+  }
+  
+  /* Estilo do botão */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #45a049;
+  }
+  
+  /* Seção de envio */
+  p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  textarea[readOnly] {
+    height: 200px;
+  }
+  
+  /* Estilos para telas maiores */
+  @media (min-width: 768px) {
+    #root,
+    form {
+      max-width: 800px; /* Mantendo a largura maior para telas grandes */
+    }
+  
+    textarea[readOnly] {
+      height: 250px;
+    }
+  }
+  
